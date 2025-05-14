@@ -787,7 +787,7 @@ footer a:hover {
 .back-to-top {
     position: fixed;
     bottom: 95px;
-    right: 30px;
+    right: 36px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -926,7 +926,7 @@ footer a:hover {
 /* Versão responsiva para os botões flutuantes */
 @media (max-width: 768px) {
     .whatsapp-float {
-        bottom: 85px;
+        bottom: 15px;
         right: 20px;
         width: 55px;
         height: 55px;
@@ -937,8 +937,8 @@ footer a:hover {
     }
     
     .back-to-top {
-        bottom: 20px;
-        right: 20px;
+        bottom: 90px;
+        right: 25px;
         width: 45px;
         height: 45px;
     }
