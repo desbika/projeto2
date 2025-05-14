@@ -300,6 +300,51 @@
         });
     </script>
 
+    <!-- Adicione este código logo antes do fechamento da tag </body> -->
+
+<!-- Botão Voltar ao Topo -->
+<button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+    // Código para o botão Voltar ao Topo
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    // Mostrar ou ocultar o botão com base na posição de rolagem
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) { // Botão aparece depois de rolar 300px
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+    
+    // Ação de clique para voltar ao topo
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+<!-- Adicione este código logo antes do botão Voltar ao Topo -->
+
+<!-- Botão Flutuante do WhatsApp -->
+<a href="https://wa.me/5544999259339?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Prime%20Hair%20Studio." 
+   class="whatsapp-float" 
+   target="_blank"
+   aria-label="Agendar pelo WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">Agendar horário</span>
+</a>
+
+<!-- Botão Voltar ao Topo (seu código existente) -->
+<button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
 </body>
 
 </html>
