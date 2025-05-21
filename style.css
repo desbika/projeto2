@@ -1,12 +1,12 @@
 /* Reset e variáveis */
 :root {
-    --primary-red: #e63946;
-    --primary-blue: #81aeed;
+    --primary-red: #f10a1e;
+    --primary-blue: hsl(215, 89%, 56%);
     --white: #f1faee;
     --black: #121212;
     --gray: #333333;
     --transition: all 0.3s ease;
-    --whatsapp-green: #25D366;
+    --whatsapp-green: #d32525;
 }
 
 * {
@@ -182,9 +182,9 @@ header.scrolled {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background-image: url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+    background-image: url("https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
     background-size: cover;
-    background-position: center;
+    background-position: center 30%;  /* Ajustado para mostrar mais da parte inferior da imagem */
     color: #ffffff;
 }
 
@@ -228,7 +228,7 @@ header.scrolled {
 }
 
 .text-highlight {
-    color: #e63946; /* Cor dourada para destaque */
+    color: #f10a1e; /* Cor dourada para destaque */
 }
 
 .hero-description {
@@ -250,17 +250,25 @@ header.scrolled {
     transition: all 0.3s ease;
     text-decoration: none;
     letter-spacing: 1px;
+    background-color: hsl(215, 89%, 56%);
+    color: white;
 }
-
+.booking-btn:hover {
+    background-color: #c52222;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 .whatsapp-btn {
-    background-color: #25D366;
+    background-color: #d32525;
     color: white;
 }
 
 .whatsapp-btn:hover {
-    background-color: #22c55e;
+    background-color: #c52222;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    
 }
 
 .whatsapp-btn i {
@@ -563,7 +571,7 @@ header.scrolled {
 
 .whatsapp-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
 }
 
 .phone-btn {
@@ -1041,7 +1049,7 @@ footer a:hover {
 }
 
 .social-icon.instagram {
-    background: #d6249f;
+    background: #d62424;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
@@ -1054,17 +1062,4 @@ footer a:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
-    .social-icons {
-        position: absolute;
-        top: 18px;
-        right: 70px;
-    }
-    
-    .social-icon {
-        width: 32px;
-        height: 32px;
-        margin-left: 8px;
-    }
-}
+
