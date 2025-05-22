@@ -27,6 +27,7 @@
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#contact">Agendamento</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
                 </ul>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/prime.hair.studio/" target="_blank" aria-label="Instagram"
@@ -54,7 +55,7 @@
                     profissionais altamente treinados estão prontos para oferecer o melhor cuidado para seus cabelos e
                     barba.</p>
                 <a href="https://sites.appbarber.com.br/mukoonbarbershop-ii0k?fbclid=PAZXh0bgNhZW0CMTEAAadASQqHuvSVnwuooJJoVkyX93EArWiGsOOOHAiIdsbf_md7YbO__eY4h6e5sg_aem_dgUWDc6qVOURStCDgZfs4g"
-                    class="booking-btn " target="_blank">
+                    class="booking-btn" target="_blank">
                     <span>AGENDAR SEU HORÁRIO</span>
                 </a>
             </div>
@@ -229,6 +230,8 @@
                         </div>
                     </div>
 
+                    
+
                     <div class="contact-additional">
                         <div class="contact-method">
                             <i class="fas fa-envelope"></i>
@@ -255,6 +258,150 @@
             </div>
         </div>
     </section>
+
+    <!-- Feedback Section -->
+<section id="feedback" class="feedback section">
+    <div class="container">
+        <h2 class="section-title">Feedback</h2>
+        <div class="feedback-content">
+            <div class="feedback-intro">
+                <div class="feedback-highlight">
+                    <div class="feedback-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Sua opinião é muito importante para nós!</h3>
+                    <p>Ajude-nos a melhorar nossos serviços compartilhando sua experiência</p>
+                </div>
+            </div>
+
+            <div class="feedback-form-container">
+                <form class="feedback-form" id="feedbackForm">
+                    <div class="form-group">
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servico">Serviço Realizado</label>
+                        <select id="servico" name="servico">
+                            <option value="">Selecione um serviço</option>
+                            <option value="corte">Corte de Cabelo</option>
+                            <option value="barba">Barba</option>
+                            <option value="coloracao">Coloração</option>
+                            <option value="tratamento">Tratamento Capilar</option>
+                            <option value="premium">Pacote Premium</option>
+                            <option value="noivo">Dia do Noivo</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avaliacao">Como você avalia nosso atendimento? *</label>
+                        <div class="rating-container">
+                            <div class="stars-rating">
+                                <input type="radio" id="star5" name="avaliacao" value="5" required>
+                                <label for="star5"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star4" name="avaliacao" value="4">
+                                <label for="star4"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star3" name="avaliacao" value="3">
+                                <label for="star3"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star2" name="avaliacao" value="2">
+                                <label for="star2"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star1" name="avaliacao" value="1">
+                                <label for="star1"><i class="fas fa-star"></i></label>
+                            </div>
+                            <span class="rating-text">Clique nas estrelas para avaliar</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentario">Comentários e Sugestões *</label>
+                        <textarea id="comentario" name="comentario" rows="5" placeholder="Conte-nos sobre sua experiência, sugestões ou elogios..." required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="recomendaria" name="recomendaria">
+                            <span class="checkmark"></span>
+                            Eu recomendaria a Prime Hair Studio para amigos e familiares
+                        </label>
+                    </div>
+
+                    <button type="submit" class="feedback-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Enviar Feedback</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="feedback-thanks" id="thankYouMessage" style="display: none;">
+            <div class="thanks-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3>Muito obrigado pelo seu feedback!</h3>
+            <p>Sua opinião é fundamental para continuarmos oferecendo o melhor serviço.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+// JavaScript para o formulário de feedback
+document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Simular envio do formulário
+    const submitBtn = document.querySelector('.feedback-btn');
+    const originalText = submitBtn.innerHTML;
+    
+    // Feedback visual de envio
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Enviando...</span>';
+    submitBtn.disabled = true;
+    
+    // Simular delay de envio
+    setTimeout(() => {
+        // Esconder formulário e mostrar mensagem de agradecimento
+        document.querySelector('.feedback-content').style.display = 'none';
+        document.getElementById('thankYouMessage').style.display = 'block';
+        
+        // Resetar formulário após alguns segundos
+        setTimeout(() => {
+            document.querySelector('.feedback-content').style.display = 'grid';
+            document.getElementById('thankYouMessage').style.display = 'none';
+            document.getElementById('feedbackForm').reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 5000);
+    }, 2000);
+});
+
+// Melhorar a experiência das estrelas
+document.querySelectorAll('.stars-rating input').forEach(input => {
+    input.addEventListener('change', function() {
+        const ratingText = document.querySelector('.rating-text');
+        const value = this.value;
+        const texts = {
+            '1': 'Muito insatisfeito 😞',
+            '2': 'Insatisfeito 😐',
+            '3': 'Neutro 🙂',
+            '4': 'Satisfeito 😊',
+            '5': 'Muito satisfeito! 🤩'
+        };
+        ratingText.textContent = texts[value] || 'Clique nas estrelas para avaliar';
+        ratingText.style.color = value >= 4 ? '#4CAF50' : value >= 3 ? '#FFC107' : '#FF5722';
+    });
+});
+</script>
 
     <!-- Footer -->
     <footer>
