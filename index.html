@@ -7,6 +7,12 @@
     <title>Prime Hair Studio - Barbearia Premium</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Preload de fontes e ícones -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+<!-- Pré-carregar imagens críticas -->
+<link rel="preload" href="images/2024-09-26.webp" as="image">
 </head>
 
 <body>
@@ -498,6 +504,8 @@ document.querySelectorAll('.stars-rating input').forEach(input => {
     <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
         <i class="fas fa-chevron-up"></i>
     </button>
+
+    
 
 </body>
 
