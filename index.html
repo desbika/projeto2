@@ -68,29 +68,61 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <h2 class="section-title">Sobre Nós</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>A <strong>Prime Hair Studio</strong> é uma barbearia premium que oferece serviços de alta
-                        qualidade em um ambiente sofisticado e acolhedor. Com uma equipe de profissionais experientes e
-                        talentosos, estamos comprometidos em proporcionar uma experiência única para nossos clientes.
-                    </p>
-                    <p>Fundada em 2018, nossa barbearia se destaca pela atenção aos detalhes e pela busca constante pela
-                        excelência. Utilizamos produtos de primeira linha e técnicas modernas para garantir resultados
-                        impecáveis em cada atendimento.</p>
-                    <p>Mais do que um corte de cabelo ou barba, oferecemos uma experiência completa de cuidado pessoal,
-                        onde você pode relaxar e se sentir renovado. Conheça nosso espaço e descubra por que somos
-                        referência em barbearia na cidade.</p>
-                </div>
-                <div class="about-image">
-                    <img src="images/2024-09-26.webp" alt="Prime Hair Studio Interior">
+    <!-- SUBSTITUA ESTA PARTE NO SEU HTML EXISTENTE -->
+<!-- About Section -->
+<section id="about" class="about section">
+    <div class="container">
+        <h2 class="section-title">Sobre Nós</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>A <strong>Prime Hair Studio</strong> é uma barbearia premium que oferece serviços de alta
+                    qualidade em um ambiente sofisticado e acolhedor. Com uma equipe de profissionais experientes e
+                    talentosos, estamos comprometidos em proporcionar uma experiência única para nossos clientes.
+                </p>
+                <p>Fundada em 2018, nossa barbearia se destaca pela atenção aos detalhes e pela busca constante pela
+                    excelência. Utilizamos produtos de primeira linha e técnicas modernas para garantir resultados
+                    impecáveis em cada atendimento.</p>
+                <p>Mais do que um corte de cabelo ou barba, oferecemos uma experiência completa de cuidado pessoal,
+                    onde você pode relaxar e se sentir renovado. Conheça nosso espaço e descubra por que somos
+                    referência em barbearia na cidade.</p>
+            </div>
+            <div class="about-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-slide active">
+                            <img src="images/ariel3.jpg" alt="Ariel Mukoon">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/ariel2.jpg" alt="Ariel Mukoon">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/ariel.jpg" alt="Ariel Mukoon">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/2024-09-26.webp" alt="Barbearia Prime Hair Studio">
+                        </div>
+                    </div>
+                    
+                    <!-- Botões de navegação -->
+                    <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
+                        <span>&#8249;</span>
+                    </button>
+                    <button class="carousel-btn next-btn" onclick="changeSlide(1)">
+                        <span>&#8250;</span>
+                    </button>
+                    
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <span class="indicator active" onclick="currentSlide(1)"></span>
+                        <span class="indicator" onclick="currentSlide(2)"></span>
+                        <span class="indicator" onclick="currentSlide(3)"></span>
+                        <span class="indicator" onclick="currentSlide(4)"></span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -489,6 +521,76 @@ document.querySelectorAll('.stars-rating input').forEach(input => {
                 behavior: 'smooth'
             });
         });
+
+        // ADICIONE ESTE JAVASCRIPT NO FINAL DO SEU ARQUIVO JS OU ANTES DO </body>
+
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const indicators = document.querySelectorAll('.indicator');
+const totalSlides = slides.length;
+
+// Função para mostrar slide específico
+function showSlide(index) {
+    // Remove classe active de todos os slides e indicadores
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Adiciona classe active ao slide e indicador atual
+    slides[index].classList.add('active');
+    indicators[index].classList.add('active');
+    
+    currentSlideIndex = index;
+}
+
+// Função para ir para próximo/anterior slide
+function changeSlide(direction) {
+    currentSlideIndex += direction;
+    
+    // Loop infinito
+    if (currentSlideIndex >= totalSlides) {
+        currentSlideIndex = 0;
+    } else if (currentSlideIndex < 0) {
+        currentSlideIndex = totalSlides - 1;
+    }
+    
+    showSlide(currentSlideIndex);
+}
+
+// Função para ir para slide específico (indicadores)
+function currentSlide(index) {
+    showSlide(index - 1); // -1 porque os indicadores começam em 1
+}
+
+// Auto-play do carrossel (opcional)
+function autoPlay() {
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000); // Muda slide a cada 5 segundos
+}
+
+// Inicializar carrossel quando página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    if (slides.length > 0) {
+        showSlide(0); // Mostra primeiro slide
+        autoPlay(); // Inicia auto-play (remova esta linha se não quiser auto-play)
+    }
+    
+    // Pausar auto-play quando mouse estiver sobre o carrossel
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        let autoPlayInterval;
+        
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+        
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoPlayInterval = setInterval(() => {
+                changeSlide(1);
+            }, 5000);
+        });
+    }
+});
     </script>
 
     <!-- Adicione este código logo antes do botão Voltar ao Topo -->

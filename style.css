@@ -182,7 +182,7 @@ header.scrolled {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background-image: url("https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+    background-image: url("images/ariel.jpg");
     background-size: cover;
     background-position: center 30%;  /* Ajustado para mostrar mais da parte inferior da imagem */
     color: #ffffff;
@@ -194,7 +194,7 @@ header.scrolled {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.55) 100%);
+    background: linear-gradient(to right, rgba(14, 14, 14, 0.85) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.55) 100%);
     z-index: 1;
 }
 
@@ -291,6 +291,8 @@ header.scrolled {
     }
 }
 
+/* SUBSTITUA O CSS DA SEÇÃO SOBRE POR ESTE */
+
 /* Sobre Section */
 .about {
     background-color: rgba(29, 53, 87, 0.05);
@@ -311,22 +313,189 @@ header.scrolled {
     font-size: 1.1rem;
 }
 
-.about-image {
+/* Carrossel Styles */
+.about-carousel {
     flex: 1;
+}
+
+.carousel-container {
+    position: relative;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.about-image img {
+.carousel-wrapper {
+    position: relative;
     width: 100%;
-    height: auto;
-    display: block;
-    transition: var(--transition);
+    height: 650px; /* Ajuste conforme necessário */
 }
 
-.about-image:hover img {
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide:hover img {
     transform: scale(1.05);
+}
+
+/* Botões de navegação */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: rgba(29, 53, 87, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active,
+.indicator:hover {
+    background: #1d3557;
+    transform: scale(1.2);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column !important;
+        gap: 30px !important;
+        text-align: center;
+    }
+    
+    .about-text {
+        order: 1;
+    }
+    
+    .about-carousel {
+        order: 2;
+        width: 100%;
+    }
+    
+    .carousel-wrapper {
+        height: 250px !important;
+        max-height: 250px;
+    }
+    
+    .carousel-btn {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 14px !important;
+    }
+    
+    .prev-btn {
+        left: 5px !important;
+    }
+    
+    .next-btn {
+        right: 5px !important;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px !important;
+    }
+    
+    .indicator {
+        width: 8px !important;
+        height: 8px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-content {
+        gap: 20px !important;
+    }
+    
+    .carousel-wrapper {
+        height: 400px !important;
+        max-height: 400px;
+    }
+    
+    .carousel-btn {
+        width: 25px !important;
+        height: 25px !important;
+        font-size: 12px !important;
+    }
+    
+    .prev-btn {
+        left: 3px !important;
+    }
+    
+    .next-btn {
+        right: 3px !important;
+    }
+    
+    .carousel-indicators {
+        bottom: 5px !important;
+        gap: 5px !important;
+    }
+    
+    .indicator {
+        width: 6px !important;
+        height: 6px !important;
+    }
 }
 
 /* Serviços Section */
@@ -392,6 +561,7 @@ header.scrolled {
 
 /* Contato Section - Versão melhorada */
 .contact {
+    background-color: rgba(29, 53, 87, 0.05);
     position: relative;
     padding: 100px 0;
 }
