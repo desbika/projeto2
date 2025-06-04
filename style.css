@@ -745,15 +745,15 @@ header.scrolled {
 }
 
 .phone-btn {
-    background-color: rgba(255, 255, 255, 0.1);
+     background-color: hsl(215, 89%, 56%);
     color: var(--white);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid hsl(215, 89%, 56%);
 }
 
 .phone-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+     background-color: hsl(215, 62%, 47%);
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px hsl(215, 68%, 62%);
 }
 
 .booking-divider {
