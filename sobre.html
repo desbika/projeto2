@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Hair Studio - Sobre Nós</title>
+    
+    <meta name="description" content="Conheça a história da Prime Hair Studio e a paixão do nosso barbeiro, Ariel Mukoon. Descubra por que somos a escolha certa para o seu estilo em Campo Mourão.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preload" href="images/ariel3.jpg" as="image">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-cut"></i>
+                    <div class="logo-text"><span>Prime</span> Hair Studio</div>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/prime.hair.studio/" target="_blank" aria-label="Instagram" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5544999259339?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Prime%20Hair%20Studio." class="social-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">Prime Hair Studio: Seu Estilo, Nossa Arte.</h2>
+
+           
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Nossa Paixão, Sua Confiança</h3>
+                    <p>Desde 2018, a arte da barbearia é nossa paixão. Oferecemos consultoria de estilo, ambiente relaxante e foco total na sua satisfação.</p>
+                    
+                    <h3>Nas Mãos de Quem Entende: Ariel Mukoon</h3>
+                    <p>Com Ariel Mukoon, sua transformação está garantida. Experiência, técnica apurada e os melhores produtos para um visual impecável.</p>
+                    
+                    <h3>Por que a Prime é a Sua Escolha?</h3>
+                    <ul class="prime-differentials">
+                        <li>
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Atendimento Exclusivo</h4>
+                                <p>Você em foco. Cuidado que entende e realça seu estilo.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-hand-scissors"></i>
+                            <div>
+                                <h4>Mestria em Cortes</h4>
+                                <p>Cortes perfeitos, do clássico ao moderno. Seu visual, nossa arte.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-gem"></i>
+                            <div>
+                                <h4>Qualidade Inegociável</h4>
+                                <p>Só o melhor para você. Produtos premium, resultados incríveis.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-couch"></i>
+                            <div>
+                                <h4>Seu Momento Prime</h4>
+                                <p>Conforto e relaxamento. Seu refúgio particular no estilo Prime.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3>Descubra a Diferença</h3>
+                    <p>Viva a experiência Prime. Agende seu horário e sinta a transformação no seu visual e bem-estar.</p>
+                </div>
+
+                <div class="about-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-slide active">
+                                <img src="images/ariel3.jpg" alt="Barbeiro Ariel Mukoon em ação na Prime Hair Studio">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/ariel2.jpg" alt="Ambiente interno da Barbearia Prime Hair Studio">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/ariel.jpg" alt="Cliente satisfeito na Prime Hair Studio">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/2024-09-26.webp" alt="Produtos de alta qualidade utilizados na Prime Hair Studio">
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
+                            <span>‹</span>
+                        </button>
+                        <button class="carousel-btn next-btn" onclick="changeSlide(1)">
+                            <span>›</span>
+                        </button>
+                        
+                        <div class="carousel-indicators">
+                            <span class="indicator active" onclick="currentSlide(1)"></span>
+                            <span class="indicator" onclick="currentSlide(2)"></span>
+                            <span class="indicator" onclick="currentSlide(3)"></span>
+                            <span class="indicator" onclick="currentSlide(4)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>© 2025 Prime Hair Studio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5544999259339?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Prime%20Hair%20Studio."
+        class="whatsapp-float" target="_blank" aria-label="Agendar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Agendar horário</span>
+    </a>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Scripts Globais
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        const header = document.getElementById('header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+        
+        if (navLinks) {
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        // navLinks.classList.remove('active'); 
+                    }
+                });
+            });
+        }
+
+        const backToTopButton = document.getElementById('back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Script Específico do Carrossel
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+        let autoPlayInterval;
+
+        function showSlide(index) {
+            if (slides.length === 0 || indicators.length === 0 || index < 0 || index >= totalSlides) return;
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            
+            currentSlideIndex = index;
+        }
+
+        function changeSlide(direction) {
+            if (slides.length === 0) return;
+            currentSlideIndex += direction;
+            
+            if (currentSlideIndex >= totalSlides) {
+                currentSlideIndex = 0;
+            } else if (currentSlideIndex < 0) {
+                currentSlideIndex = totalSlides - 1;
+            }
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            if (slides.length === 0) return;
+            showSlide(index - 1);
+        }
+
+        function startAutoPlay() {
+            if (slides.length === 0) return;
+            stopAutoPlay(); 
+            autoPlayInterval = setInterval(() => {
+                changeSlide(1);
+            }, 3000);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (slides.length > 0 && indicators.length > 0) {
+                showSlide(0);
+                startAutoPlay();
+            }
+            
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+                carouselContainer.addEventListener('mouseleave', startAutoPlay);
+            }
+        });
+    </script>
+</body>
+</html>

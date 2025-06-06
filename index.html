@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Hair Studio - Barbearia Premium</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- Preload de fontes e ícones -->
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <title>Prime Hair Studio - Barbearia Premium em Campo Mourão</title>
+    
+    <meta name="description" content="Encontre seu estilo na Prime Hair Studio, a barbearia premium de Campo Mourão. Oferecemos cortes modernos, barba terapia e um atendimento exclusivo. Agende seu horário!">
 
-<!-- Pré-carregar imagens críticas -->
-<link rel="preload" href="images/2024-09-26.webp" as="image">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preload" href="images/ariel.jpg" as="image">
 
 <body>
     <header id="header">
@@ -29,19 +32,17 @@
                     <span></span>
                 </div>
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#contact">Agendamento</a></li>
-                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
                 </ul>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/prime.hair.studio/" target="_blank" aria-label="Instagram"
-                        class="social-icon instagram">
+                    <a href="https://www.instagram.com/prime.hair.studio/" target="_blank" aria-label="Instagram" class="social-icon instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/5544999259339?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Prime%20Hair%20Studio."
-                        class="social-icon whatsapp">
+                    <a href="https://wa.me/5544999259339?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Prime%20Hair%20Studio." class="social-icon whatsapp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -49,8 +50,6 @@
         </div>
     </header>
 
-
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="overlay"></div>
         <div class="container">
@@ -68,549 +67,67 @@
         </div>
     </section>
 
-    <!-- SUBSTITUA ESTA PARTE NO SEU HTML EXISTENTE -->
-<!-- About Section -->
-<section id="about" class="about section">
-    <div class="container">
-        <h2 class="section-title">Sobre Nós</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>A <strong>Prime Hair Studio</strong> é uma barbearia premium que oferece serviços de alta
-                    qualidade em um ambiente sofisticado e acolhedor. Com uma equipe de profissionais experientes e
-                    talentosos, estamos comprometidos em proporcionar uma experiência única para nossos clientes.
-                </p>
-                <p>Fundada em 2018, nossa barbearia se destaca pela atenção aos detalhes e pela busca constante pela
-                    excelência. Utilizamos produtos de primeira linha e técnicas modernas para garantir resultados
-                    impecáveis em cada atendimento.</p>
-                <p>Mais do que um corte de cabelo ou barba, oferecemos uma experiência completa de cuidado pessoal,
-                    onde você pode relaxar e se sentir renovado. Conheça nosso espaço e descubra por que somos
-                    referência em barbearia na cidade.</p>
-            </div>
-            <div class="about-carousel">
-                <div class="carousel-container">
-                    <div class="carousel-wrapper">
-                        <div class="carousel-slide active">
-                            <img src="images/ariel3.jpg" alt="Ariel Mukoon">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="images/ariel2.jpg" alt="Ariel Mukoon">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="images/ariel.jpg" alt="Ariel Mukoon">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="images/2024-09-26.webp" alt="Barbearia Prime Hair Studio">
-                        </div>
-                    </div>
-                    
-                    <!-- Botões de navegação -->
-                    <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
-                        <span>&#8249;</span>
-                    </button>
-                    <button class="carousel-btn next-btn" onclick="changeSlide(1)">
-                        <span>&#8250;</span>
-                    </button>
-                    
-                    <!-- Indicadores -->
-                    <div class="carousel-indicators">
-                        <span class="indicator active" onclick="currentSlide(1)"></span>
-                        <span class="indicator" onclick="currentSlide(2)"></span>
-                        <span class="indicator" onclick="currentSlide(3)"></span>
-                        <span class="indicator" onclick="currentSlide(4)"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-        <div class="container">
-            <h2 class="section-title">Nossos Serviços</h2>
-            <div class="services-container">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3 class="service-title">Corte de Cabelo</h3>
-                    <p class="service-price">R$ 50,00</p>
-                    <p class="service-description">Corte personalizado, feito com técnicas modernas e atenção aos
-                        detalhes para um resultado impecável.</p>
-                    <a href="#wwp" class="btn">Agendar</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-razor"></i>
-                    </div>
-                    <h3 class="service-title">Barba</h3>
-                    <p class="service-price">R$ 35,00</p>
-                    <p class="service-description">Modelagem, hidratação e finalização da barba com produtos de
-                        qualidade para um acabamento perfeito.</p>
-                    <a href="#wwp" class="btn">Agendar</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="service-title">Coloração</h3>
-                    <p class="service-price">R$ 80,00</p>
-                    <p class="service-description">Coloração profissional com produtos que protegem os fios e garantem
-                        um resultado natural e duradouro.</p>
-                    <a href="#wwp" class="btn">Agendar</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hand-sparkles"></i>
-                    </div>
-                    <h3 class="service-title">Tratamento Capilar</h3>
-                    <p class="service-price">R$ 70,00</p>
-                    <p class="service-description">Hidratação profunda e tratamentos capilares específicos para cada
-                        tipo de cabelo e necessidade.</p>
-                    <a href="#wwp" class="btn">Agendar</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3 class="service-title">Pacote Premium</h3>
-                    <p class="service-price">R$ 120,00</p>
-                    <p class="service-description">Combinação de corte de cabelo, barba e tratamento capilar com
-                        atendimento VIP e bebida inclusa.</p>
-                    <a href="#wwp" class="btn">Agendar</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-coffee"></i>
-                    </div>
-                    <h3 class="service-title">Dia do Noivo</h3>
-                    <p class="service-price">R$ 180,00</p>
-                    <p class="service-description">Preparação completa para o grande dia, incluindo corte, barba,
-                        hidratação e massagem relaxante.</p>
-                    <a href="#wwp" class="btn">Agendar</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <h2 class="section-title">Agende Seu Horário</h2>
-
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="booking-highlight">
-                        <div class="booking-icon">
-                            <i class="fas fa-cut"></i>
-                        </div>
-                        <h3>Transforme seu visual na Prime Hair Studio</h3>
-                        <p>Atendimento personalizado com profissionais especializados</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Endereço</h3>
-                            <p>R. Regina Fabris Trivelato - Jardim Paulista, Campo Mourão - PR, 87310-510</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Horário de Funcionamento</h3>
-                            <p>Segunda a Sábado: 9h às 20h<br>Domingo: 10h às 16h</p>
-                        </div>
-                    </div>
-
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.190169505336!2d-52.3555479!3d-24.0243582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ed0be6e2c144d5%3A0x5e34678b6f21b7a5!2sPrime%20Hair%20Studio!5e0!3m2!1spt-BR!2sbr!4v1746056200473!5m2!1spt-BR!2sbr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-
-                <!-- Área de agendamento e contato -->
-                <div class="booking-container">
-                    <div class="booking-cta">
-                        <h2 class="booking-title">Agende agora mesmo!</h2>
-                        <p class="booking-subtitle">Escolha a opção mais conveniente para você</p>
-
-                        <a href="https://wa.me/5544999259339?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Prime%20Hair%20Studio."
-                            class="booking-btn whatsapp-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>Agendar pelo WhatsApp</span>
-                        </a>
-
-                        <a href="tel:+5544999259339" class="booking-btn phone-btn">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>Ligar Agora</span>
-                        </a>
-
-                        <div class="booking-divider">
-                            <span>ou</span>
-                        </div>
-
-                        <div class="booking-steps">
-                            <h3>Como funciona:</h3>
-                            <ol class="steps-list">
-                                <li><i class="fas fa-calendar-check"></i> Escolha o melhor dia e horário</li>
-                                <li><i class="fas fa-user-check"></i> Confirme seu agendamento</li>
-                                <li><i class="fas fa-smile"></i> Venha e transforme seu visual</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    
-
-                    <div class="contact-additional">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <p><a href="mailto:contato@primehairstudio.com">contato@primehairstudio.com</a></p>
-                        </div>
-
-                        <div class="social-links-container">
-                            <h3>Siga-nos</h3>
-                            <div class="social-links">
-                                <a href="https://www.instagram.com/prime.hair.studio/" target="_blank"
-                                    aria-label="Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://wa.me/5544999259339" target="_blank" aria-label="WhatsApp">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                                <a href="https://www.tiktok.com/@arielmukoon" target="_blank" aria-label="TikTok">
-                                    <i class="fab fa-tiktok"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feedback Section -->
-<section id="feedback" class="feedback section">
-    <div class="container">
-        <h2 class="section-title">Feedback</h2>
-        <div class="feedback-content">
-            <div class="feedback-intro">
-                <div class="feedback-highlight">
-                    <div class="feedback-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Sua opinião é muito importante para nós!</h3>
-                    <p>Ajude-nos a melhorar nossos serviços compartilhando sua experiência</p>
-                </div>
-            </div>
-
-            <div class="feedback-form-container">
-                <form action="https://formsubmit.co/enzogamenezes@gmail.com" method="POST" class="feedback-form" id="feedbackForm">
-                    <div class="form-group">
-                        <label for="nome">Nome </label>
-                        <input type="text" id="nome" name="nome" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="telefone">Telefone</label>
-                        <input type="tel" id="telefone" name="telefone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="servico">Serviço Realizado</label>
-                        <select id="servico" name="servico">
-                            <option value="">Selecione um serviço</option>
-                            <option value="corte">Corte de Cabelo</option>
-                            <option value="barba">Barba</option>
-                            <option value="coloracao">Coloração</option>
-                            <option value="tratamento">Tratamento Capilar</option>
-                            <option value="premium">Pacote Premium</option>
-                            <option value="noivo">Dia do Noivo</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="avaliacao">Como você avalia nosso atendimento? *</label>
-                        <div class="rating-container">
-                            <div class="stars-rating">
-                                <input type="radio" id="star5" name="avaliacao" value="5" required>
-                                <label for="star5"><i class="fas fa-star"></i></label>
-                                <input type="radio" id="star4" name="avaliacao" value="4">
-                                <label for="star4"><i class="fas fa-star"></i></label>
-                                <input type="radio" id="star3" name="avaliacao" value="3">
-                                <label for="star3"><i class="fas fa-star"></i></label>
-                                <input type="radio" id="star2" name="avaliacao" value="2">
-                                <label for="star2"><i class="fas fa-star"></i></label>
-                                <input type="radio" id="star1" name="avaliacao" value="1">
-                                <label for="star1"><i class="fas fa-star"></i></label>
-                            </div>
-                            <span class="rating-text">Clique nas estrelas para avaliar</span>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="comentario">Comentários e Sugestões *</label>
-                        <textarea id="comentario" name="comentario" rows="5" placeholder="Conte-nos sobre sua experiência, sugestões ou elogios..." required></textarea>
-                    </div>
-
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="recomendaria" name="recomendaria">
-                            <span class="checkmark"></span>
-                            Eu recomendaria a Prime Hair Studio para amigos e familiares
-                        </label>
-                    </div>
-
-                    <button type="submit" class="feedback-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        <span>Enviar Feedback</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-
-        <div class="feedback-thanks" id="thankYouMessage" style="display: none;">
-            <div class="thanks-icon">
-                <i class="fas fa-heart"></i>
-            </div>
-            <h3>Muito obrigado pelo seu feedback!</h3>
-            <p>Sua opinião é fundamental para continuarmos oferecendo o melhor serviço.</p>
-        </div>
-    </div>
-</section>
-
-<script>
-// JavaScript para o formulário de feedback
-document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Simular envio do formulário
-    const submitBtn = document.querySelector('.feedback-btn');
-    const originalText = submitBtn.innerHTML;
-    
-    // Feedback visual de envio
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Enviando...</span>';
-    submitBtn.disabled = true;
-    
-    // Simular delay de envio
-    setTimeout(() => {
-        // Esconder formulário e mostrar mensagem de agradecimento
-        document.querySelector('.feedback-content').style.display = 'none';
-        document.getElementById('thankYouMessage').style.display = 'block';
-        
-        // Resetar formulário após alguns segundos
-        setTimeout(() => {
-            document.querySelector('.feedback-content').style.display = 'grid';
-            document.getElementById('thankYouMessage').style.display = 'none';
-            document.getElementById('feedbackForm').reset();
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        }, 5000);
-    }, 2000);
-});
-
-
-
-// Melhorar a experiência das estrelas
-document.querySelectorAll('.stars-rating input').forEach(input => {
-    input.addEventListener('change', function() {
-        const ratingText = document.querySelector('.rating-text');
-        const value = this.value;
-        const texts = {
-            '1': 'Muito insatisfeito 😞',
-            '2': 'Insatisfeito 😐',
-            '3': 'Neutro 🙂',
-            '4': 'Satisfeito 😊',
-            '5': 'Muito satisfeito! 🤩'
-        };
-        ratingText.textContent = texts[value] || 'Clique nas estrelas para avaliar';
-        ratingText.style.color = value >= 4 ? '#4CAF50' : value >= 3 ? '#FFC107' : '#FF5722';
-    });
-});
-</script>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Prime Hair Studio. Todos os direitos reservados.</p>
+            <p>© 2025 Prime Hair Studio. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script>
-        // Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Header Scroll Effect
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Close menu when clicking on a link (mobile)
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Smooth scrolling for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-
-    <!-- Adicione este código logo antes do fechamento da tag </body> -->
-
-    <!-- Botão Voltar ao Topo -->
-    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script>
-        // Código para o botão Voltar ao Topo
-        const backToTopButton = document.getElementById('back-to-top');
-
-        // Mostrar ou ocultar o botão com base na posição de rolagem
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) { // Botão aparece depois de rolar 300px
-                backToTopButton.classList.add('show');
-            } else {
-                backToTopButton.classList.remove('show');
-            }
-        });
-
-        // Ação de clique para voltar ao topo
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // ADICIONE ESTE JAVASCRIPT NO FINAL DO SEU ARQUIVO JS OU ANTES DO </body>
-
-let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const indicators = document.querySelectorAll('.indicator');
-const totalSlides = slides.length;
-
-// Função para mostrar slide específico
-function showSlide(index) {
-    // Remove classe active de todos os slides e indicadores
-    slides.forEach(slide => slide.classList.remove('active'));
-    indicators.forEach(indicator => indicator.classList.remove('active'));
-    
-    // Adiciona classe active ao slide e indicador atual
-    slides[index].classList.add('active');
-    indicators[index].classList.add('active');
-    
-    currentSlideIndex = index;
-}
-
-// Função para ir para próximo/anterior slide
-function changeSlide(direction) {
-    currentSlideIndex += direction;
-    
-    // Loop infinito
-    if (currentSlideIndex >= totalSlides) {
-        currentSlideIndex = 0;
-    } else if (currentSlideIndex < 0) {
-        currentSlideIndex = totalSlides - 1;
-    }
-    
-    showSlide(currentSlideIndex);
-}
-
-// Função para ir para slide específico (indicadores)
-function currentSlide(index) {
-    showSlide(index - 1); // -1 porque os indicadores começam em 1
-}
-
-// Auto-play do carrossel (opcional)
-function autoPlay() {
-    setInterval(() => {
-        changeSlide(1);
-    }, 5000); // Muda slide a cada 5 segundos
-}
-
-// Inicializar carrossel quando página carregar
-document.addEventListener('DOMContentLoaded', function() {
-    if (slides.length > 0) {
-        showSlide(0); // Mostra primeiro slide
-        autoPlay(); // Inicia auto-play (remova esta linha se não quiser auto-play)
-    }
-    
-    // Pausar auto-play quando mouse estiver sobre o carrossel
-    const carouselContainer = document.querySelector('.carousel-container');
-    if (carouselContainer) {
-        let autoPlayInterval;
-        
-        carouselContainer.addEventListener('mouseenter', () => {
-            clearInterval(autoPlayInterval);
-        });
-        
-        carouselContainer.addEventListener('mouseleave', () => {
-            autoPlayInterval = setInterval(() => {
-                changeSlide(1);
-            }, 5000);
-        });
-    }
-});
-    </script>
-
-    <!-- Adicione este código logo antes do botão Voltar ao Topo -->
-
-    <!-- Botão Flutuante do WhatsApp -->
     <a href="https://wa.me/5544999259339?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Prime%20Hair%20Studio."
         class="whatsapp-float" target="_blank" aria-label="Agendar pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span class="tooltip">Agendar horário</span>
     </a>
 
-    <!-- Botão Voltar ao Topo (seu código existente) -->
     <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    
+    <script>
+        // Scripts Globais
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
 
+        const header = document.getElementById('header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Close menu when clicking on a link (mobile) - opcional para multi-page
+        if (navLinks) {
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        // navLinks.classList.remove('active'); // Pode remover para multi-page
+                    }
+                });
+            });
+        }
+
+        const backToTopButton = document.getElementById('back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
 </body>
-
 </html>
