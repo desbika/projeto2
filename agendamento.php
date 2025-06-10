@@ -1,54 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php
+$page_title = 'Prime Hair Studio - Agende Seu Horário';
+$page_description = 'Agende seu horário na Prime Hair Studio de forma rápida e fácil! Reserve online pelo AppBarber, fale conosco pelo WhatsApp ou ligue. Veja nosso endereço e horário de funcionamento.';
+include 'header.php';
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Hair Studio - Agende Seu Horário</title>
-
-    <meta name="description" content="Agende seu horário na Prime Hair Studio de forma rápida e fácil! Reserve online pelo AppBarber, fale conosco pelo WhatsApp ou ligue. Veja nosso endereço e horário de funcionamento.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <header id="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <i class="fas fa-cut"></i>
-                    <div class="logo-text"><span>Prime</span> Hair Studio</div>
-                </div>
-                <div class="menu-toggle" id="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="agendamento.html">Agendamento</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/prime.hair.studio/" target="_blank" aria-label="Instagram" class="social-icon instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://wa.me/5544999259339?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Prime%20Hair%20Studio." class="social-icon whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-   <section id="contact" class="contact section">
+<section id="contact" class="contact section">
     <div class="container">
         <h2 class="section-title">Agende Seu Horário</h2>
         <p class="section-intro">
@@ -141,66 +97,5 @@
         </div>
     </div>
 </section>
-    <footer>
-        <div class="container">
-            <p>© 2025 Prime Hair Studio. Todos os direitos reservados.</p>
-        </div>
-    </footer>
 
-    <a href="https://wa.me/5544999259339?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Prime%20Hair%20Studio."
-        class="whatsapp-float" target="_blank" aria-label="Agendar pelo WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-        <span class="tooltip">Agendar horário</span>
-    </a>
-
-    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script>
-        // Scripts Globais (copiados de index.html)
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-        if (menuToggle && navLinks) {
-            menuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        }
-
-        const header = document.getElementById('header');
-        if (header) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-        }
-        
-        if (navLinks) {
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (navLinks.classList.contains('active')) {
-                        // navLinks.classList.remove('active'); 
-                    }
-                });
-            });
-        }
-
-        const backToTopButton = document.getElementById('back-to-top');
-        if (backToTopButton) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTopButton.classList.add('show');
-                } else {
-                    backToTopButton.classList.remove('show');
-                }
-            });
-            backToTopButton.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-    </script>
-</body>
-</html>
+<?php include 'footer.php'; ?> 

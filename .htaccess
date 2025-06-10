@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /Projeto2/
+
+# Se o arquivo ou diretório não existir, redireciona para routes.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ routes.php [QSA,L] 
