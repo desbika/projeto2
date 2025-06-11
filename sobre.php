@@ -6,7 +6,7 @@ include 'header.php';
 
 <section id="about" class="about section">
     <div class="container">
-        <h2 class="section-title">Prime Hair Studio: Seu Estilo, Nossa Arte.</h2>
+        <h2 class="section-title">Seu Estilo, Nossa Arte.</h2>
 
         <div class="about-content">
             <div class="about-text">

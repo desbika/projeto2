@@ -7,7 +7,8 @@ include 'header.php';
 <section id="services" class="services section">
     <div class="container">
         <h2 class="section-title">Nossos Serviços</h2>
-        <p class="section-intro" style="text-align: center; max-width: 750px; margin: -25px auto 50px; font-size: 1.1rem; color: #f1faee; opacity: 0.9; line-height: 1.7;">
+        
+        <p class="section-intro" style="text-align: center; max-width: 750px; margin: -0px auto 50px; font-size: 1.1rem; color: #f1faee; opacity: 0.9; line-height: 1.7;">
             Na Prime Hair Studio, cada serviço é uma experiência de cuidado e estilo. Utilizamos técnicas precisas e produtos de excelência para garantir que você saia sempre satisfeito e com o visual renovado. Escolha o seu e sinta a diferença.
         </p>
 
@@ -17,7 +18,7 @@ include 'header.php';
                 <h3 class="service-title">Corte de Cabelo</h3>
                 <p class="service-price">R$ 50,00</p>
                 <p class="service-description">Consultoria de estilo e corte preciso para um visual moderno e personalizado. Acabamento impecável, do seu jeito.</p>
-                <a href="/agendamento" class="btn">Agendar</a>
+                <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
 
             <div class="service-card">
@@ -25,7 +26,7 @@ include 'header.php';
                 <h3 class="service-title">Barba Terapia</h3>
                 <p class="service-price">R$ 35,00</p>
                 <p class="service-description">Barba alinhada, modelada e tratada com toalha quente e produtos premium. Design, hidratação e relaxamento.</p>
-                <a href="/agendamento" class="btn">Agendar</a>
+                <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
 
             <div class="service-card">
@@ -33,7 +34,7 @@ include 'header.php';
                 <h3 class="service-title">Coloração Expert</h3>
                 <p class="service-price">R$ 80,00</p>
                 <p class="service-description">Transforme ou realce sua cor com segurança e estilo. Produtos de ponta para um resultado natural e duradouro.</p>
-                <a href="/agendamento" class="btn">Agendar</a>
+                <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
 
             <div class="service-card">
@@ -41,7 +42,7 @@ include 'header.php';
                 <h3 class="service-title">Tratamento Capilar VIP</h3>
                 <p class="service-price">R$ 70,00</p>
                 <p class="service-description">Revitalize seus fios com hidratação profunda e tratamentos específicos para a saúde e brilho do seu cabelo.</p>
-                <a href="/agendamento" class="btn">Agendar</a>
+                <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
 
             <div class="service-card popular-choice">
@@ -50,7 +51,7 @@ include 'header.php';
                 <h3 class="service-title">Pacote Prime</h3>
                 <p class="service-price">R$ 120,00</p>
                 <p class="service-description">A experiência completa! Corte, Barba Terapia, Tratamento Capilar VIP, nossa conta.</p>
-                <a href="/agendamento" class="btn">Agendar</a>
+                <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
 
             <div class="service-card">
@@ -58,7 +59,7 @@ include 'header.php';
                 <h3 class="service-title">Dia do Noivo Prime</h3>
                 <p class="service-price">R$ 180,00</p>
                 <p class="service-description">Preparamos você para o grande dia! Cuidados completos para um visual impecável e momentos de relaxamento total.</p>
-                <a href="/agendamento" class="btn">Agendar</a>
+                <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
         </div>
     </div>
@@ -69,7 +70,7 @@ include 'header.php';
         <h2 class="section-title">Pronto para Elevar Seu Estilo?</h2>
         <p>Nossos especialistas estão à sua espera para oferecer uma experiência de barbearia incomparável. Agende seu horário e descubra o padrão de excelência da Prime Hair Studio.</p>
         <div class="cta-buttons">
-            <a href="/agendamento" class="btn btn-cta-primary">Agendar Agora</a>
+            <a href="/Projeto2/agendamento" class="btn btn-cta-primary">Agendar Agora</a>
             <a href="https://wa.me/5544999259339?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." target="_blank" class="btn btn-cta-secondary">Fale Conosco</a>
         </div>
     </div>

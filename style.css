@@ -117,7 +117,8 @@
         z-index: 1000;
         transition: transform 0.3s ease, background-color 0.3s ease;
         backdrop-filter: blur(10px);
-        height: 80px; /* Altura fixa do header */
+        height: 80px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     header.scrolled {
@@ -264,9 +265,11 @@
         position: relative;
         overflow: hidden;
         background-size: cover;
-        background-position: center;
+        background-position: center 30%;
         background-attachment: fixed;
+        background-image: url('images/ariel.jpg');
     }
+    
 
     .overlay {
         position: absolute;
@@ -448,7 +451,7 @@
 
         .section-title {
             font-size: 1.8rem;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         
         .hero-title {
@@ -462,42 +465,46 @@
         
         .hero-description {
             font-size: 1rem;
+            max-width: 100%;
         }
         
         .container {
-            width: 95%;
+            width: 100%;
             padding: 0 15px;
         }
 
+        /* Menu Mobile */
         .menu-toggle {
             display: flex;
         }
 
         .nav-links {
             position: fixed;
-            top: 0;
+            top: 80px; /* Altura do header */
             right: -100%;
-            width: 80%;
-            max-width: 300px;
-            height: 100vh;
-            background-color: var(--black);
+            width: 250px;
+            height: auto;
+            max-height: calc(100vh - 80px);
+            background-color: rgba(18, 18, 18, 0.98);
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            transition: transform 0.3s ease;
-            padding: 20px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 0;
+            transition: right 0.3s ease;
+            padding: 15px 0;
             box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-            transform: translateX(0);
+            z-index: 999;
+            border-radius: 0 0 0 15px;
+            overflow-y: auto;
         }
 
         .nav-links.active {
-            transform: translateX(-100%);
+            right: 0;
         }
 
         .nav-links li {
             width: 100%;
-            text-align: center;
+            text-align: left;
             opacity: 0;
             transform: translateX(20px);
             transition: var(--transition);
@@ -516,51 +523,70 @@
 
         .nav-links a {
             display: block;
-            padding: 15px;
-            font-size: 1.1rem;
-            border-radius: 5px;
+            padding: 12px 25px;
+            font-size: 1rem;
             transition: var(--transition);
+            border-left: 3px solid transparent;
         }
 
         .nav-links a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid var(--primary-red);
+            padding-left: 30px;
         }
 
         .nav-links a::after {
             display: none;
         }
 
-        .hero {
-            min-height: 500px;
+        /* Ajustes para cards e grids */
+        .services-container {
+            grid-template-columns: 1fr;
+            gap: 25px;
         }
 
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-card {
+            padding: 25px;
+        }
+
+        .service-icon {
+            font-size: 2.2rem;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+        }
+
+        /* Ajustes para formulários */
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            font-size: 0.95rem;
+        }
+
+        .feedback-btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Ajustes para botões flutuantes */
         .whatsapp-float {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             bottom: 15px;
             right: 15px;
         }
 
-        .section {
-            margin-top: 60px;
-        }
-
-        header,
-        .navbar {
-            height: 60px;
-        }
-
-        .logo i {
-            font-size: 1.4rem;
-        }
-
-        .logo-text {
-            font-size: 1.2rem;
-        }
-
-        .social-icon {
-            width: 30px;
-            height: 30px;
+        .back-to-top {
+            width: 45px;
+            height: 45px;
+            bottom: 85px;
+            right: 15px;
         }
     }
 
@@ -577,7 +603,7 @@
 
         .section-title {
             font-size: 1.5rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .hero-title {
@@ -2484,6 +2510,10 @@
         .back-to-top:hover {
             transform: none;
         }
+
+        .service-card:hover {
+            transform: none;
+        }
     }
 
     /* Ajustes específicos para cada página */
@@ -2539,4 +2569,15 @@
     main > .section:first-child {
         margin-top: var(--header-height, 80px) !important;
         padding-top: var(--section-spacing) !important;
+    }
+
+    .services-container .btn {
+        background-color: var(--primary-red);
+        color: var(--white);
+        transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+    .services-container .btn:hover {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        box-shadow: 0 4px 16px 0 rgba(33, 150, 243, 0.15);
     }

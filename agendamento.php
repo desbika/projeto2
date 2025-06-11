@@ -32,15 +32,15 @@ include 'header.php';
                     <div class="contact-details">
                         <h3>Horário de Funcionamento</h3>
                         <p>Segunda a Sábado: 9h às 20h<br>
-                           Domingo: Atendimento com hora marcada!</p>
+                            Domingo: Atendimento com hora marcada!</p>
                     </div>
                 </div>
 
                 <div class="map">
-                    <iframe 
-                        src="COLE_O_LINK_DO_Maps_AQUI" 
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade" title="Localização da Prime Hair Studio">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.0909099445173!2d-52.36531818844784!3d-24.0280261782295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ed741c305c6d37%3A0x44f89a91a9a8360d!2sR.%20Regina%20Fabris%20Trivelato%20-%20Jardim%20Paulista%2C%20Campo%20Mour%C3%A3o%20-%20PR%2C%2087310-510!5e0!3m2!1spt-BR!2sbr!4v1717546824915!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-dowxngrade" title="Localização da Prime Hair Studio">
                     </iframe>
                 </div>
             </div>
@@ -48,7 +48,7 @@ include 'header.php';
             <div class="booking-container">
                 <div class="booking-cta">
                     <h3 class="booking-title">Reserve Seu Horário</h3>
-                    
+
                     <a href="https://sites.appbarber.com.br/mukoonbarbershop-ii0k?fbclid=PAZXh0bgNhZW0CMTEAAadASQqHuvSVnwuooJJoVkyX93EArWiGsOOOHAiIdsbf_md7YbO__eY4h6e5sg_aem_dgUWDc6qVOURStCDgZfs4g" class="booking-btn online-booking-btn" target="_blank">
                         <i class="fas fa-calendar-alt"></i>
                         <span>Agendar Online (AppBarber)</span>
@@ -77,7 +77,7 @@ include 'header.php';
                         </ol>
                     </div>
                 </div>
-                
+
                 <div class="contact-additional">
                     <div class="contact-method">
                         <i class="fas fa-envelope"></i>
@@ -98,4 +98,4 @@ include 'header.php';
     </div>
 </section>
 
-<?php include 'footer.php'; ?> 
+<?php include 'footer.php'; ?>
