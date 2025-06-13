@@ -67,6 +67,18 @@ include 'header.php';
                         <div class="carousel-slide">
                             <img src="images/2024-09-26.webp" alt="Produtos de alta qualidade utilizados na Prime Hair Studio">
                         </div>
+                        <div class="carousel-slide">
+                            <img src="images/CORTE2024-03-20.webp" alt="Ambiente da Prime Hair Studio">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/corte.webp" alt="Trabalhos realizados na Prime Hair Studio">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/corte4.webp" alt="Detalhes do ambiente Prime Hair Studio">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/corte3.webp" alt="Experiência Prime Hair Studio">
+                        </div>
                     </div>
                     
                     <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
@@ -81,6 +93,10 @@ include 'header.php';
                         <span class="indicator" onclick="currentSlide(2)"></span>
                         <span class="indicator" onclick="currentSlide(3)"></span>
                         <span class="indicator" onclick="currentSlide(4)"></span>
+                        <span class="indicator" onclick="currentSlide(5)"></span>
+                        <span class="indicator" onclick="currentSlide(6)"></span>
+                        <span class="indicator" onclick="currentSlide(7)"></span>
+                        <span class="indicator" onclick="currentSlide(8)"></span>
                     </div>
                 </div>
             </div>

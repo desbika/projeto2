@@ -16,7 +16,7 @@ include 'header.php';
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-cut"></i></div>
                 <h3 class="service-title">Corte de Cabelo</h3>
-                <p class="service-price">R$ 50,00</p>
+                <p class="service-price">R$ 45,00</p>
                 <p class="service-description">Consultoria de estilo e corte preciso para um visual moderno e personalizado. Acabamento impecável, do seu jeito.</p>
                 <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
@@ -24,7 +24,7 @@ include 'header.php';
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-spa"></i></div>
                 <h3 class="service-title">Barba Terapia</h3>
-                <p class="service-price">R$ 35,00</p>
+                <p class="service-price">R$ 45,00</p>
                 <p class="service-description">Barba alinhada, modelada e tratada com toalha quente e produtos premium. Design, hidratação e relaxamento.</p>
                 <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
@@ -32,15 +32,15 @@ include 'header.php';
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-palette"></i></div>
                 <h3 class="service-title">Coloração Expert</h3>
-                <p class="service-price">R$ 80,00</p>
+                <p class="service-price">R$ 110,00</p>
                 <p class="service-description">Transforme ou realce sua cor com segurança e estilo. Produtos de ponta para um resultado natural e duradouro.</p>
                 <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-hand-holding-water"></i></div>
-                <h3 class="service-title">Tratamento Capilar VIP</h3>
-                <p class="service-price">R$ 70,00</p>
+                <h3 class="service-title">Hidratação</h3>
+                <p class="service-price">R$ 40,00</p>
                 <p class="service-description">Revitalize seus fios com hidratação profunda e tratamentos específicos para a saúde e brilho do seu cabelo.</p>
                 <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
@@ -50,15 +50,15 @@ include 'header.php';
                 <div class="service-icon"><i class="fas fa-crown"></i></div>
                 <h3 class="service-title">Pacote Prime</h3>
                 <p class="service-price">R$ 120,00</p>
-                <p class="service-description">A experiência completa! Corte, Barba Terapia, Tratamento Capilar VIP, nossa conta.</p>
+                <p class="service-description">A experiência completa! Corte de cabelo, barba Terapia e sombrancelha.</p>
                 <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
 
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-user-tie"></i></div>
-                <h3 class="service-title">Dia do Noivo Prime</h3>
-                <p class="service-price">R$ 180,00</p>
-                <p class="service-description">Preparamos você para o grande dia! Cuidados completos para um visual impecável e momentos de relaxamento total.</p>
+                <div class="service-icon"><i class="fas fa-hand-sparkles"></i></div>
+                <h3 class="service-title">Depilação</h3>
+                <p class="service-price">R$ 15,00</p>
+                <p class="service-description">Depilação profissional com cera quente. Áreas específicas ou pacote completo. Cuidados com a pele e resultados duradouros.</p>
                 <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>
         </div>

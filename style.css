@@ -8,7 +8,7 @@
         --transition: all 0.3s ease;
         --whatsapp-green: #d32525;
         --container-padding: 20px;
-        --section-spacing: 80px;
+        --section-spacing: 40px;
         --header-height: 80px;
     }
 
@@ -41,9 +41,9 @@
 
     /* 1. Seções principais SEM duplicidade de espaçamento */
     .section {
-        padding-top: var(--header-height, 80px);
-        padding-bottom: var(--section-spacing);
+        padding: var(--section-spacing) 0;
         position: relative;
+        margin-top: 0;
     }
 
     .section-title {
@@ -222,15 +222,27 @@
     .menu-toggle:focus { outline: none; }
 
     @media (max-width: 992px) {
-        :root { --container-padding: 12px; --section-spacing: 60px; --header-height: 70px; }
+        :root { 
+            --container-padding: 12px; 
+            --section-spacing: 5px; 
+            --header-height: 70px; 
+        }
         .menu-toggle { display: flex; }
     }
     @media (max-width: 768px) {
-        :root { --container-padding: 10px; --section-spacing: 50px; --header-height: 60px; }
+        :root { 
+            --container-padding: 10px; 
+            --section-spacing: 4px; 
+            --header-height: 60px; 
+        }
         .menu-toggle { display: flex; }
     }
     @media (max-width: 576px) {
-        :root { --container-padding: 8px; --section-spacing: 40px; --header-height: 50px; }
+        :root { 
+            --container-padding: 8px; 
+            --section-spacing: 3px; 
+            --header-height: 50px; 
+        }
         .menu-toggle { display: flex; }
     }
     @media (min-width: 993px) {
@@ -387,7 +399,7 @@
     @media (max-width: 992px) {
         :root {
             --container-padding: 12px;
-            --section-spacing: 60px;
+            --section-spacing: 5px;
             --header-height: 70px;
         }
 
@@ -441,7 +453,7 @@
     @media (max-width: 768px) {
         :root {
             --container-padding: 10px;
-            --section-spacing: 50px;
+            --section-spacing: 4px;
             --header-height: 60px;
         }
 
@@ -593,7 +605,7 @@
     @media (max-width: 576px) {
         :root {
             --container-padding: 8px;
-            --section-spacing: 40px;
+            --section-spacing: 3px;
             --header-height: 50px;
         }
 
@@ -692,6 +704,19 @@
     /* Carrossel Styles */
     .about-carousel {
         flex: 1;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .about-carousel {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .about-carousel {
+            margin-bottom: 30px;
+        }
     }
 
     .carousel-container {
@@ -2569,6 +2594,11 @@
     main > .section:first-child {
         margin-top: var(--header-height, 80px) !important;
         padding-top: var(--section-spacing) !important;
+    }
+
+    body > .section:first-child {
+        padding-top: 0;
+        margin-top: calc(var(--header-height) + 10px);
     }
 
     .services-container .btn {

@@ -2,6 +2,28 @@
 $page_title = 'Prime Hair Studio - Deixe seu Feedback';
 $page_description = 'Sua opinião é fundamental para nós! Deixe seu feedback sobre nossos serviços e ajude a Prime Hair Studio a melhorar sempre. Avalie seu atendimento.';
 include 'header.php';
+
+// Array de depoimentos dos clientes
+$depoimentos = [
+    [
+        'nome' => 'João Silva',
+        'texto' => 'Atendimento impecável e o corte ficou exatamente como eu queria. A equipe é super profissional e o ambiente é muito estiloso. Virei cliente fiel!',
+        'avaliacao' => 5,
+        'foto' => 'https://i.pravatar.cc/100?u=joao'
+    ],
+    [
+        'nome' => 'Carlos Souza',
+        'texto' => 'Melhor barba que já fiz na vida. Usam produtos de alta qualidade e a toalha quente no final faz toda a diferença. Recomendo demais!',
+        'avaliacao' => 5,
+        'foto' => 'https://i.pravatar.cc/100?u=carlos'
+    ],
+    [
+        'nome' => 'Maria Oliveira',
+        'texto' => 'Levei meu filho para cortar o cabelo e a paciência e o carinho da equipe foram incríveis. O corte ficou ótimo e ele adorou a experiência.',
+        'avaliacao' => 4.5,
+        'foto' => 'https://i.pravatar.cc/100?u=maria'
+    ]
+];
 ?>
 
 <section id="feedback" class="feedback section">
@@ -136,71 +158,35 @@ include 'header.php';
     <div class="container">
         <h2 class="section-title">O Que Nossos Clentes Dizem</h2>
         <div class="testimonials-grid">
+            <?php foreach ($depoimentos as $depoimento): ?>
             <div class="testimonial-card">
                 <div class="testimonial-quote-icon">
                     <i class="fas fa-quote-left"></i>
                 </div>
                 <blockquote class="testimonial-text">
-                    "Atendimento impecável e o corte ficou exatamente como eu queria. A equipe é super profissional e o ambiente é muito estiloso. Virei cliente fiel!"
+                    "<?php echo $depoimento['texto']; ?>"
                 </blockquote>
                 <div class="testimonial-author">
-                    <img src="https://i.pravatar.cc/100?u=joao" alt="Foto do cliente João Silva" class="author-img">
+                    <img src="<?php echo $depoimento['foto']; ?>" alt="Foto do cliente <?php echo $depoimento['nome']; ?>" class="author-img">
                     <div class="author-info">
-                        <p class="author-name">João Silva</p>
+                        <p class="author-name"><?php echo $depoimento['nome']; ?></p>
                         <div class="author-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <?php
+                            $estrelasCheias = floor($depoimento['avaliacao']);
+                            $temMeiaEstrela = $depoimento['avaliacao'] - $estrelasCheias >= 0.5;
+                            
+                            for ($i = 0; $i < $estrelasCheias; $i++) {
+                                echo '<i class="fas fa-star"></i>';
+                            }
+                            if ($temMeiaEstrela) {
+                                echo '<i class="fas fa-star-half-alt"></i>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <blockquote class="testimonial-text">
-                    "Melhor barba que já fiz na vida. Usam produtos de alta qualidade e a toalha quente no final faz toda a diferença. Recomendo demais!"
-                </blockquote>
-                <div class="testimonial-author">
-                    <img src="https://i.pravatar.cc/100?u=carlos" alt="Foto do cliente Carlos Souza" class="author-img">
-                    <div class="author-info">
-                        <p class="author-name">Carlos Souza</p>
-                        <div class="author-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <blockquote class="testimonial-text">
-                    "Levei meu filho para cortar o cabelo e a paciência e o carinho da equipe foram incríveis. O corte ficou ótimo e ele adorou a experiência."
-                </blockquote>
-                <div class="testimonial-author">
-                    <img src="https://i.pravatar.cc/100?u=maria" alt="Foto da cliente Maria Oliveira" class="author-img">
-                    <div class="author-info">
-                        <p class="author-name">Maria Oliveira</p>
-                        <div class="author-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

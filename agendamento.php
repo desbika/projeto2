@@ -32,7 +32,7 @@ include 'header.php';
                     <div class="contact-details">
                         <h3>Horário de Funcionamento</h3>
                         <p>Segunda a Sábado: 9h às 20h<br>
-                            Domingo: Atendimento com hora marcada!</p>
+                            Domingo: Não atendemos!</p>
                     </div>
                 </div>
 
