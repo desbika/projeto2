@@ -9,19 +9,19 @@ $depoimentos = [
         'nome' => 'João Silva',
         'texto' => 'Atendimento impecável e o corte ficou exatamente como eu queria. A equipe é super profissional e o ambiente é muito estiloso. Virei cliente fiel!',
         'avaliacao' => 5,
-        'foto' => 'https://i.pravatar.cc/100?u=joao'
+        'foto' => 'https://randomuser.me/api/portraits/men/32.jpg'
     ],
     [
         'nome' => 'Carlos Souza',
         'texto' => 'Melhor barba que já fiz na vida. Usam produtos de alta qualidade e a toalha quente no final faz toda a diferença. Recomendo demais!',
         'avaliacao' => 5,
-        'foto' => 'https://i.pravatar.cc/100?u=carlos'
+        'foto' => 'https://randomuser.me/api/portraits/men/45.jpg'
     ],
     [
         'nome' => 'Maria Oliveira',
         'texto' => 'Levei meu filho para cortar o cabelo e a paciência e o carinho da equipe foram incríveis. O corte ficou ótimo e ele adorou a experiência.',
-        'avaliacao' => 4.5,
-        'foto' => 'https://i.pravatar.cc/100?u=maria'
+        'avaliacao' => 5,
+        'foto' => 'https://randomuser.me/api/portraits/women/28.jpg'
     ]
 ];
 ?>
@@ -74,24 +74,31 @@ $depoimentos = [
 
             <div class="feedback-form-container">
                 <form action="https://formsubmit.co/enzogamenezes@gmail.com" method="POST" class="feedback-form" id="feedbackForm">
+                    <!-- Campos ocultos para configuração do FormSubmit -->
+                    <input type="hidden" name="_subject" value="Novo Feedback - Prime Hair Studio">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://primehairstudio.com.br/feedback?status=success">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_autoresponse" value="Obrigado pelo seu feedback! Sua opinião é muito importante para nós.">
+
                     <div class="form-group">
-                        <label for="nome">Nome </label>
-                        <input type="text" id="nome" name="nome" required>
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" name="nome" required minlength="3" maxlength="100">
                     </div>
 
                     <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="form-group">
                         <label for="telefone">Telefone</label>
-                        <input type="tel" id="telefone" name="telefone">
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
                     </div>
 
                     <div class="form-group">
-                        <label for="servico">Serviço Realizado</label>
-                        <select id="servico" name="servico">
+                        <label for="servico">Serviço Realizado *</label>
+                        <select id="servico" name="servico" required>
                             <option value="">Selecione um serviço</option>
                             <option value="corte">Corte de Cabelo</option>
                             <option value="barba">Barba</option>
@@ -124,18 +131,17 @@ $depoimentos = [
 
                     <div class="form-group">
                         <label for="comentario">Comentários e Sugestões *</label>
-                        <textarea id="comentario" name="comentario" rows="5" placeholder="Conte-nos sobre sua experiência, sugestões ou elogios..." required></textarea>
+                        <textarea id="comentario" name="comentario" rows="5" placeholder="Conte-nos sobre sua experiência, sugestões ou elogios..." required minlength="10" maxlength="1000"></textarea>
                     </div>
 
                     <div class="form-group checkbox-group">
                         <label class="checkbox-label">
-                            <input type="checkbox" id="recomendaria" name="recomendaria">
+                            <input type="checkbox" id="recomendaria" name="recomendaria" value="Sim">
                             <span class="checkmark"></span>
                             Eu recomendaria a Prime Hair Studio para amigos e familiares
                         </label>
                     </div>
-                    <input type="hidden" name="_next" value="/feedback?status=success">
-                    <input type="hidden" name="_captcha" value="false">
+
                     <button type="submit" class="feedback-btn">
                         <i class="fas fa-paper-plane"></i>
                         <span>Enviar Feedback</span>
@@ -220,6 +226,7 @@ $depoimentos = [
                 if (response.ok) {
                     if(feedbackContent) feedbackContent.style.display = 'none';
                     if(thankYouMessage) thankYouMessage.style.display = 'block';
+                    feedbackForm.reset();
                 } else {
                     response.json().then(data => {
                         if (data.errors) {
@@ -241,6 +248,39 @@ $depoimentos = [
         });
     }
 
+    // Validação do campo de telefone
+    const telefoneInput = document.getElementById('telefone');
+    if (telefoneInput) {
+        telefoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            // Limita a 11 dígitos
+            if (value.length > 11) {
+                value = value.slice(0, 11);
+            }
+            
+            // Formata o número
+            if (value.length > 0) {
+                if (value.length <= 2) {
+                    value = `(${value}`;
+                } else if (value.length <= 6) {
+                    value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+                } else if (value.length <= 10) {
+                    value = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6)}`;
+                } else {
+                    value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+                }
+            }
+            
+            e.target.value = value;
+        });
+
+        // Remove a validação do pattern antes do envio
+        feedbackForm.addEventListener('submit', function(e) {
+            telefoneInput.removeAttribute('pattern');
+        });
+    }
+
     // Melhorar a experiência das estrelas
     document.querySelectorAll('.stars-rating input').forEach(input => {
         input.addEventListener('change', function () {
@@ -257,10 +297,8 @@ $depoimentos = [
             };
             ratingText.textContent = texts[value] || 'Clique nas estrelas para avaliar';
 
-            // Remove classes de cor antigas
             ratingText.classList.remove('rating-good', 'rating-neutral', 'rating-bad');
 
-            // Adiciona a classe de cor nova com base no valor
             if (value >= 4) {
                 ratingText.classList.add('rating-good');
             } else if (value == 3) {

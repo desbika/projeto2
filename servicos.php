@@ -49,7 +49,7 @@ include 'header.php';
                 <span class="service-badge">Mais Pedido</span>
                 <div class="service-icon"><i class="fas fa-crown"></i></div>
                 <h3 class="service-title">Pacote Prime</h3>
-                <p class="service-price">R$ 120,00</p>
+                <p class="service-price">R$ 105,00</p>
                 <p class="service-description">A experiência completa! Corte de cabelo, barba Terapia e sombrancelha.</p>
                 <a href="/Projeto2/agendamento" class="btn">Agendar</a>
             </div>

@@ -81,7 +81,7 @@ include 'header.php';
                 <div class="contact-additional">
                     <div class="contact-method">
                         <i class="fas fa-envelope"></i>
-                        <p><a href="mailto:contato@primehairstudio.com">contato@primehairstudio.com</a></p>
+                        <p><a href="mailto:Arielmukoon123@gmail.com">Arielmukoon123@gmail.com</a></p>
                     </div>
 
                     <div class="social-links-container">
