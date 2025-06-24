@@ -34,11 +34,11 @@ $page_description = isset($page_description) ? $page_description : 'Barbearia Pr
                 </button>
                 <div class="menu-overlay" id="menu-overlay"></div>
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="/Projeto2/">Home</a></li>
-                    <li><a href="/Projeto2/sobre">Sobre</a></li>
-                    <li><a href="/Projeto2/servicos">Serviços</a></li>
-                    <li><a href="/Projeto2/agendamento">Agendamento</a></li>
-                    <li><a href="/Projeto2/feedback">Feedback</a></li>
+                    <li><a href="/index.php">Home</a></li>
+                    <li><a href="/sobre.php">Sobre</a></li>
+                    <li><a href="/servicos.php">Serviços</a></li>
+                    <li><a href="/agendamento.php">Agendamento</a></li>
+                    <li><a href="/feedback.php">Feedback</a></li>
                 </ul>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/prime.hair.studio/" target="_blank" aria-label="Instagram" class="social-icon instagram">
